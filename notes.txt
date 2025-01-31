@@ -1,4 +1,4 @@
-HOME                                                               p
+HOME                                                               1
 
 **Project**
 1. [Description](description.html)                                 0
@@ -23,16 +23,16 @@ HOME                                                               p
 2. [Parts](parts.html)                                             0
 
 **Hardware & Software**
-1. [Hardware & Software](software.html)                            0
+1. [Hardware & Software](software.html)                            p
 
 **Human Practices**
-1. [iHP](ihp.html)                                                 0
-2. [Outreach & Collaboration](outreach.html)                       0
+1. [iHP](ihp.html)                                                 p
+2. [Outreach & Collaboration](outreach.html)-now HP                0
 
 **Education**
 1. [Education](education.html)                                     N
 
 **Team**
-1. [Meet the Team](meet_the_team.html)                             p
+1. [Meet the Team](meet_the_team.html)                             1
 2. [Attributions](attributions.html)                               0
 3. [Medals](medals.html)                                           N
