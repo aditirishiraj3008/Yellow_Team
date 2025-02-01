@@ -1,14 +1,25 @@
-// loader
+// Loader hourglass
 window.addEventListener('load', () => {
   const loader = document.querySelector('.loader_container');  
-  const content = document.querySelector('.home');  
+  const homeContent = document.querySelector('.home');  
+  const headerContent = document.querySelector('.header');  
 
-  // Hide loader and show content after 2 seconds
-  setTimeout(() => {
+  if (homeContent) {
+    // If .home exists, delay hiding loader for 2000ms
+    setTimeout(() => {
       loader.style.display = 'none';  
-      content.style.display = 'block';  
-  }, 2000);  
+      homeContent.style.display = 'block';  
+    }, 2000);
+  } 
+  else {
+    // Otherwise, hide loader immediately after loading
+    setTimeout(() => {
+      loader.style.display = 'none';  
+      homeContent.style.display = 'block';  
+    }, 600);
+  }
 });
+
 
 
 // Navbar Toggle
