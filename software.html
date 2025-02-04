@@ -91,7 +91,9 @@
             <h3>Table of Contents</h3>
             <ul>
                 <li><a href="#hardware">Hardware</a></li>
+                <li><a href="#working"> -Working</a></li>
                 <li><a href="#software">Software</a></li>
+                <li><a href="#sensor"> -Sensor cost and Maintenance</a></li>
             </ul>
         </aside>
 
@@ -104,11 +106,11 @@
                     <b>Type of bioreactor:</b> Modified Simple Stirred Bioreactor
                 </p>
             </section>
-            <img src="images/hardware.jpg" alt="hardware design" style="width: 30vw; margin-left: 15vw; border-radius: 1vh;">
-            <p style="background-color: #f0ddc0; width: 100%; text-align: center; font-family: 'Jua';">Fig 1: Rough diagram of the required bioreactor</p>
+            <img src="images/hardware.jpg" alt="hardware design" style="width: 25vw; margin-left: 21vw; border-radius: 1vh;">
+            <p style="background-color: #f0ddc0; width: 100%; text-align: center; font-family: 'Jua';">Fig 1: Rough diagram of the required bioreactor[3]</p>
             <br>
             <section class="subsections">      
-                <h2>Features</h2>
+                <h2>Features[1][3]</h2>
                     <ul class="lists">
                         <li>The fermentation tank lined with stainless steel</li>
                         <li>Steam inlets and steam outlets</li>
@@ -122,26 +124,173 @@
 
             <br>
             <section class="subsections">
-                <h2>Working</h2>
+                <h2 id="working">Working[2]</h2>
                 <p>
-                    First, the bioreactor is sterilized by passing steam through a designated inlet. The inoculum and the culture medium (after autoclaving) are fed into the bioreactor through the feed port. The agitator system then performs the rotation. Adequate ventilation is also ensured by the sterile air supply. A foam braker is installed to remove any foam that may occur. The temperature and pressure sensors are installed directly above the medium/mixture surface. The pH sensor is also activated via a probe. The reaction is carried out under different temperature, pressure and pH conditions to optimize the gamma-PGA yield. The product concentration is measured using a biosensor. The sampling port allows for taking samples of the mixture without disturbing the equilibrium of the system.
+                    First, the bioreactor is sterilized by passing steam through a designated inlet. The inoculum and the culture medium (after autoclaving) are fed into the bioreactor through the feed port. The agitator system then performs the rotation. Adequate ventilation is also ensured by the sterile air supply. A foam braker is installed to remove any foam that may occur. The temperature and pressure sensors are installed directly above the medium/mixture surface. The pH sensor is also activated via a probe. The reaction is carried out under different temperature, pressure and pH conditions to optimize the gamma-PGA yield. The product concentration is measured using a biosensor. The sampling port allows for taking samples of the mixture without disturbing the equilibrium of the system.[5]
                     <br><br>
                     <b>Note:</b> Initial experiments are carried out in small-scale bioreactors (volume: 1 to 5 liters). After validating temperature, pressure, and pH parameters for maximum gamma-PGA production, large-scale bioreactor implementation is undertaken.
                 </p>
             </section>
-            <section class="subsections">
+            <section class="subsections" style="padding-bottom: 4vh;">
                 <h2 id="software"><big><b>Software</b></big></h2>
                 <p>
-                    First, the bioreactor is sterilized by passing steam through a designated inlet. The inoculum and the culture medium (after autoclaving) are fed into the bioreactor through the feed port. The agitator system then performs the rotation. Adequate ventilation is also ensured by the sterile air supply. A foam braker is installed to remove any foam that may occur. The temperature and pressure sensors are installed directly above the medium/mixture surface. The pH sensor is also activated via a probe. The reaction is carried out under different temperature, pressure and pH conditions to optimize the gamma-PGA yield. The product concentration is measured using a biosensor. The sampling port allows for taking samples of the mixture without disturbing the equilibrium of the system.
+                    As explained, the hardware aspect of our project required further support via a ECL biosensor. To accommodate for the results produced by the same, we needed a software that can essentially help with detecting amounts of gamma PGA produced and provide us real-time data to increase optimum PGA yield. Our plan for the same is to use pre-existing python libraries to help us with the basic communication protocol required with the biosensor, and traditional protocols to help with the sensors themselves.  
+                    <br>
+                    Before delving to the same, we decided the total no. and types of sensors and what each of them must achieve.
                     <br><br>
-                    <b>Note:</b> Initial experiments are carried out in small-scale bioreactors (volume: 1 to 5 liters). After validating temperature, pressure, and pH parameters for maximum gamma-PGA production, large-scale bioreactor implementation is undertaken.
+                    1.   ECL biosensor for Measuring Gamma PGA quantity
+                    <br>
+                    2.   3 traditional sensors measure Oxygen, Pressure, pH and Temperature
+                    <br><br>
+                    To understand the working of the ECL biosensor and how effective it would be, a brief on the same is as follows
+                    <br>
+                    ECL biosensors work on the process of electrochemiluminescence. Given a preferred electrochemical reaction occurs, the entity illuminates itself [6].
+                    <br>
+                    The sensor is composed of working electrodes, that have the biorecognition element immobilized on them. The biorecognition element must be an antibody of great affinity to Gamma PGA, so we chose - ______ 
+                    <br>]
+                    When the components bind, they further create the chain or reactions that ends with the decay of excited state of the illuminated compound - which will be luminol in our biosensor and thus giving rise to a faint light [6].
+                    <br><br>
+                    Our 4 other sensors are the basic pressure, O2, pH and temperature sensor. 
+                    <br>
+                    The pressure sensor will be a strain gauge-based pressure, wherein a diaphragm connected to a thin conductive material that act as the strain gauges. The Wheatstone bridge connected to the strain gauges react to the change in pressure due to the deformation of the diaphragm, this further produced a voltage that can be converted to digital signals by the signal conditioning circuitry within the bioreactor’s control system [7].
+                    <br>
+                    The pH sensor will be based on the glass electrode mechanism. The tip of the glass electrode is made of a thin-pH sensitive material and the potential difference created between the glass and reference electrodes give us the pH via the Nernst equation [8].
+                    <br>
+                    Temperature sensor will be a simple temperature jacket-based sensor. 
+                    <br>
+                    O2 sensor will be using Luminescent DO sensors [9]. 
+                    <br><br>
+                    <b>The software to be used: -</b>
+                    <br><br>
+                    The software framework for all sensors will be based on Python, using the PySensors, BioPython and OpenBCI-python. 
+                    <br>
+                    We will be using Arduino (AVR based) in tandem with our sensors. 
+                    <br>
+                    We can use Analog inputs as communication protocol for temperature sensor, and MQTT protocol for Pressure.
+                    <br>
+                    We can use I2C protocol for both the pH and O2 sensors.
+                    <br>
+                    For data logging as basic MySQL would suffice, but upon scaling, we could shift to Influx DB. Although we have few ideas on our incorporation of GUI, we have decided that Flask could be of great help with the same [10].
                 </p>
+            </section>
+
+            <section class="subsections" style="margin: -10vh 0;">
+                <ul class="lists" style="border-radius: initial;">
+                    <h3 style="font-size: 14px; margin-left: -1vw; font-weight: 300; padding: 1vh 0;">
+                        <b>Here are the algorithms we will be using for the 4 traditional sensors</b>
+                        <br><br>
+                        1. Data Collection & Sampling Rate
+                    </h3>
+                    <li style="margin-left: 2vw;">
+                        Sampling Frequency:
+                        <ul>
+                            <li style="margin-left: 3vw;">pH: Every 10 seconds (given the slow response time)</li>
+                            <li style="margin-left: 3vw;">O₂: Depends on Microbial content </li>
+                            <li style="margin-left: 3vw;">Temperature: Again, on Microbial content</li>
+                            <li style="margin-left: 3vw;">Pressure: Every 500ms - 1s (for real-time monitoring)</li>
+                        </ul>
+                    </li>
+                    <li style="margin-left: 2vw;">
+                        Data Filtering:
+                        <ul>
+                            <li style="margin-left: 3vw;">Kalman Filter seems to meet our needs to the fullest, it dynamically adjusts based on uncertainty in sensor readings, making it ideal for pressure and O₂ sensors, where fluctuations are common. Noise reduction can be drastically improved [11].</li>
+                        </ul>
+                    </li>
+                    <h3 style="font-size: 14px; margin-left: -1vw; font-weight: 300; margin-top: -5vh;">
+                        <br><br>
+                        2. Calibration & Correction Methods
+                    </h3>
+                    <li style="margin-left: 2vw;">Sensor Drift Compensation: Use periodic calibration with buffer solutions (pH)</li>
+                    <li style="margin-left: 2vw;">Temperature Compensation: Since pH and O₂ readings are temperature-sensitive, apply real-time correction using temperature sensor data</li>
+                    <h3 style="font-size: 14px; margin-left: -1vw; font-weight: 300; margin-top: -5vh;">
+                        <br><br>
+                        3. Fault Detection & Error Handling
+                    </h3>
+                    <li style="margin-left: 2vw;">
+                        Outlier Detection:
+                        <ul>
+                            <li style="margin-left: 3vw;">If pH > 14 or < 0, mark as invalid</li>
+                            <li style="margin-left: 3vw;">If O₂ > 100% saturation, check sensor drift</li>
+                            <li style="margin-left: 3vw;">If Temperature deviates by ±10% in 1s, flag as anomaly [12]</li>
+                        </ul>
+                    </li>
+                </ul>
+                <br><br>
+            </section>
+
+            <section class="subsections">
+                <p style="padding-top: 1vh; margin-top: -1vh; border-radius: 0 0 2vh 2vh;">
+                    Algorithms for the various processes 
+                    <br><br>
+                    Although the Kalman filter could be used, given cost and complexity a Moving Average Filter, could be used as well. 
+                    <br><br>
+                    The team is looking into implementation of isolation forests for fault reduction and other applications of ML to detect noise and eliminate them.
+                </p>
+            </section>
+
+            <section class="subsections">
+                <h2 id="sensor">Sensor Cost and Maintenance Overview for Bioreactor Monitoring</h2>
+                <ul class="lists">
+                    <li style="margin-left: 2vw;">
+                        pH Sensor:
+                        <ul>
+                            <li style="margin-left: 3vw;">Estimated cost: ₹5,000</li>
+                            <li style="margin-left: 3vw;">Annual maintenance cost: ₹5,000</li>
+                        </ul>
+                    </li>
+                    <li style="margin-left: 2vw;">
+                        Dissolved Oxygen (DO) Sensor:
+                        <ul>
+                            <li style="margin-left: 3vw;">Estimated cost: ₹10,000</li>
+                            <li style="margin-left: 3vw;">Annual maintenance cost: ₹10,000</li>
+                        </ul>
+                    </li>
+                    <li style="margin-left: 2vw;">
+                        Temperature Sensor:
+                        <ul>
+                            <li style="margin-left: 3vw;">Estimated cost: ₹1,000</li>
+                            <li style="margin-left: 3vw;">Annual maintenance cost: ₹1,000</li>
+                            <li style="margin-left: 3vw;">Minimal maintenance required</li>
+                        </ul>
+                    </li>
+                    <li style="margin-left: 2vw;">
+                        Pressure Sensor:
+                        <ul>
+                            <li style="margin-left: 3vw;">Estimated cost: ₹10,000</li>
+                            <li style="margin-left: 3vw;">Annual maintenance cost: ₹10,000</li>
+                            <li style="margin-left: 3vw;">Requires periodic recalibration</li>
+                        </ul>
+                    </li>
+                    <li style="margin-left: 2vw;">
+                        Electrochemiluminescence (ECL) Biosensor:
+                        <ul>
+                            <li style="margin-left: 3vw;">Estimated cost: ₹50,000+</li>
+                            <li style="margin-left: 3vw;">Annual maintenance cost: ₹25,000</li>
+                            <li style="margin-left: 3vw;">○	Maintenance involves reagent refilling, electrode preservation,[13][14]</li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <br><br>
             </section>
 
             <section class="subsections">       <!--references section-->
                 <h2>References</h2>
                     <ol class="reference">
-                        <li><a class="ref" target="_blank" href="#">dsghjdhfjf</a></li>
+                        <li>Kaur, I., & Sharma, A. D. (2021). Bioreactor: design, functions and fermentation innovations. Res. Rev. Biotechnol. Biosci, 8, 34-43. <a class="ref" target="_blank" href="https://doi.org/10.1016/j.bej.2007.09.001">https://doi.org/10.1016/j.bej.2007.09.001</a></li>
+                        <li>Jiang, Y., Tang, B., Xu, Z., Liu, K., Xu, Z., Feng, X., & Xu, H. (2016). Improvement of poly-γ-glutamic acid biosynthesis in a moving bed biofilm reactor by Bacillus subtilis NX-2. Bioresource technology, 218, 360-366.</li>
+                        <li><a class="ref" target="_blank" href="https://images.app.goo.gl/2EE5ogCv8Ckknr2Y8">https://images.app.goo.gl/2EE5ogCv8Ckknr2Y8</a></li>
+                        <li><a class="ref" target="_blank" href="https://images.app.goo.gl/BeHaaWV9T452Yan37">https://images.app.goo.gl/BeHaaWV9T452Yan37</a></li>
+                        <li><a class="ref" target="_blank" href="https://youtu.be/mCHkupuahDg?si=j_7RyviV40tCJcPS">https://youtu.be/mCHkupuahDg?si=j_7RyviV40tCJcPS</a></li>
+                        <li>Gross, E. M., Maddipati, S. S., & Snyder, S. M. (2016). A review of electrogenerated chemiluminescent biosensors for assays in biological matrices. Bioanalysis, 8(19), 2071–2089. <a class="ref" target="_blank" href="https://doi.org/10.4155/bio-2016-0178 ">https://doi.org/10.4155/bio-2016-0178 </a></li>
+                        <li>Mazzei, D., Vozzi, F., Cisternino, A., Vozzi, G., & Ahluwalia, A. (2008). A high-throughput bioreactor system for simulating physiological environments. IEEE Transactions on Industrial Electronics, 55(9), 3273–3280. <a class="ref" target="_blank" href="https://doi.org/10.1109/tie.2008.928122">https://doi.org/10.1109/tie.2008.928122</a></li>
+                        <li>Jeevarajan, A. S., Vani, S., Taylor, T. D., & Anderson, M. M. (2002). Continuous ph monitoring in a perfused bioreactor system using an optical ph sensor. Biotechnology and Bioengineering, 78(4), 467–472. <a class="ref" target="_blank" href="https://doi.org/10.1002/bit.10212">https://doi.org/10.1002/bit.10212</a></li>
+                        <li>Gao, F. G., Jeevarajan, A. S., & Anderson, M. M. (2004). Long‐term continuous monitoring of dissolved oxygen in cell culture medium for perfused bioreactors using optical oxygen sensors. Biotechnology and Bioengineering, 86(4), 425–433. <a class="ref" target="_blank" href="https://doi.org/10.1002/bit.20010">https://doi.org/10.1002/bit.20010</a></li>
+                        <li>Wang, B., Wang, Z., Chen, T., & Zhao, X. (2020). Development of novel Bioreactor Control Systems based on smart sensors and Actuators. Frontiers in Bioengineering and Biotechnology, 8. <a class="ref" target="_blank" href="https://doi.org/10.3389/fbioe.2020.00007">https://doi.org/10.3389/fbioe.2020.00007</a></li>
+                        <li>García-Mañas, F., Guzmán, J. L., Berenguel, M., & Acién, F. G. (2019). Biomass estimation of an industrial raceway photobioreactor using an extended Kalman filter and a dynamic model for microalgae production. Algal Research, 37, 103–114. <a class="ref" target="_blank" href="https://doi.org/10.1016/j.algal.2018.11.009">https://doi.org/10.1016/j.algal.2018.11.009</a></li>
+                        <li>Princz, S., Wenzel, U., Miller, R., & Hessling, M. (2014). Data pre-processing method to remove interference of gas bubbles and cell clusters during anaerobic and aerobic yeast fermentations in a stirred tank bioreactor. Journal of Applied Spectroscopy, 81(5), 855–861. <a class="ref" target="_blank" href="https://doi.org/10.1007/s10812-014-0017-4">https://doi.org/10.1007/s10812-014-0017-4</a></li>
+                        <li><a class="ref" target="_blank" href="https://www.hannainst.com/">https://www.hannainst.com/</a></li>
+                        <li><a class="ref" target="_blank" href="https://www.metrohm.com/en_in.html">https://www.metrohm.com/en_in.html</a></li>
                     </ol>
             </section>
         </div>

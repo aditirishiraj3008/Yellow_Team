@@ -13,10 +13,10 @@ window.addEventListener('load', () => {
   } 
   else {
     // Otherwise, hide loader immediately after loading
-    setTimeout(() => {
-      loader.style.display = 'none';  
-      homeContent.style.display = 'block';  
-    }, 600);
+    loader.style.display = 'none';
+    if (headerContent) {
+      headerContent.style.display = 'block';
+    }
   }
 });
 

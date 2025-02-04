@@ -1,12 +1,12 @@
 HOME                                                               1
 
 **Project**
-1. [Description](description.html)                                 0
-2. [Background](background.html)                                   0
+1. [Description](description.html)                                 1
+2. [Background](background.html)                                   0-yet to
 3. [Design](design.html)                                           N-
-4. [Proof of Concept](proof_of_concept.html)                       0
+4. [Proof of Concept](proof_of_concept.html)                       0-yet to
 5. [Implementation](implementation.html)                           N
-6. [Biosafety](biosafety.html)                                     N
+6. [Biosafety](biosafety.html)                                     0
 7. [Contribution](contributions.html)                              N
 
 **Wet Lab**
@@ -27,12 +27,12 @@ HOME                                                               1
 
 **Human Practices**
 1. [iHP](ihp.html)                                                 p
-2. [Outreach & Collaboration](outreach.html)-now HP                0
+2. [Outreach & Collaboration](outreach.html)-now HP                p
 
 **Education**
 1. [Education](education.html)                                     N
 
 **Team**
-1. [Meet the Team](meet_the_team.html)                             1
-2. [Attributions](attributions.html)                               0
+1. [Meet the Team](meet_the_team.html)                             p
+2. [Attributions](attributions.html)                               p
 3. [Medals](medals.html)                                           N
