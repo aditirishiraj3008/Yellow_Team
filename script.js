@@ -20,8 +20,6 @@ window.addEventListener('load', () => {
   }
 });
 
-
-
 // Navbar Toggle
 const navbarToggle = document.querySelector(".menu-toggle");
 const navbarMenu = document.querySelector(".nav_links");
