@@ -2,7 +2,7 @@ HOME                                                               1
 
 **Project**
 1. [Description](description.html)                                 1
-2. [Background](background.html)                                   0-yet to
+2. [Background](background.html)                                   1
 3. [Design](design.html)                                           N-
 4. [Proof of Concept](proof_of_concept.html)                       0-yet to
 5. [Implementation](implementation.html)                           N
@@ -23,10 +23,10 @@ HOME                                                               1
 2. [Parts](parts.html)                                             0
 
 **Hardware & Software**
-1. [Hardware & Software](software.html)                            1-pr
+1. [Hardware & Software](software.html)                            1
 
 **Human Practices**
-1. [iHP](ihp.html)                                                 p-pr
+1. [iHP](ihp.html)                                                 1-pr
 2. [Outreach & Collaboration](outreach.html)-now HP                p-yet to
 
 **Education**
