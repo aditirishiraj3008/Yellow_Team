@@ -292,8 +292,7 @@ body{
     color: #222222;
     cursor: pointer;
     text-shadow: -10px 20px 10px rgba(59, 32, 0, 0.7);
-  } 
-}
+} 
 
 .char::after {
     position: absolute;
