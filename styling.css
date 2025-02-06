@@ -283,7 +283,7 @@ body{
     justify-content: center;
     font-family: 'Indie Flower';
     font-weight: 900;
-    font-size: 120px;
+    font-size: 130px;
 }
 
 .char {
@@ -373,7 +373,7 @@ body{
     display: flex;
     justify-content: space-between;
     margin-bottom: 15vh;
-    padding-left: 25vh; 
+    padding-left: 23vw; 
     font-size: 25px;
     width: 80vw; 
     text-align: center; 
@@ -390,7 +390,7 @@ body{
     font-weight: 400;
     color: #fff4e3;
     align-content: center;
-    text-align: initial;
+    text-align: center;
 }
 
 .home_text3{
