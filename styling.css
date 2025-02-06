@@ -842,6 +842,11 @@ p{
     display: flex;
 }
 
+#team_image{
+    background-image: url("images/team_bg.jpg");
+    background-attachment: relative;
+}
+
 .attribution{
     width: 40vw;
 }
