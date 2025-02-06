@@ -10,7 +10,7 @@ HOME                                                               1 - italics p
 7. [Contribution](contributions.html)                            N
 
 **Wet Lab**
-1. [Engineering](engineering.html)                                 0
+1. [Engineering](engineering.html)                                 1 - proofread, bold some stuff, otherwise boring to look
 2. [Materials](materials.html)                                   N
 3. [Notebook](notebook.html)                                     N
 4. [Protocols](protocols.html)                                   N
@@ -34,5 +34,5 @@ HOME                                                               1 - italics p
 
 **Team**
 1. [Meet the Team](meet_the_team.html)                             1
-2. [Attributions](attributions.html)                               p - change it accordingly
+2. [Attributions](attributions.html)                               p - change it accordingly. if there is time fill external as well
 3. [Medals](medals.html)                                         N

@@ -842,6 +842,10 @@ p{
     display: flex;
 }
 
+.attribution{
+    width: 40vw;
+}
+
 .reference{
     margin: 2vw;
     padding-left: 2vw;
