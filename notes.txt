@@ -4,30 +4,30 @@ HOME                                                               1
 1. [Description](description.html)                                 1
 2. [Background](background.html)                                   1
 3. [Design](design.html)                                           N-
-4. [Proof of Concept](proof_of_concept.html)                       0-yet to
+4. [Proof of Concept](proof_of_concept.html)                       0-yet to-ss
 5. [Implementation](implementation.html)                           N
-6. [Biosafety](biosafety.html)                                     0-yet to
+6. [Biosafety](biosafety.html)                                     0-yet to-ss
 7. [Contribution](contributions.html)                              N
 
 **Wet Lab**
-1. [Engineering](engineering.html)                                 0
+1. [Engineering](engineering.html)                                 0-yet to-mc
 2. [Materials](materials.html)                                     N
 3. [Notebook](notebook.html)                                       N-
 4. [Protocols](protocols.html)                                     N
-5. [Measurement](measurement.html)                                 0-yet to
+5. [Measurement](measurement.html)                                 0-yet to-as
 6. [Lab Safety](labsafety.html)                                    N
 7. [Results](results.html)                                         N
 
 **Dry Lab**
-1. [Modelling](modelling.html)                                     0
-2. [Parts](parts.html)                                             0
+1. [Modelling](modelling.html)                                     0-ad
+2. [Parts](parts.html)                                             0-ad
 
 **Hardware & Software**
 1. [Hardware & Software](software.html)                            1
 
 **Human Practices**
-1. [iHP](ihp.html)                                                 1-pr
-2. [Outreach & Collaboration](outreach.html)-now HP                p-yet to
+1. [iHP](ihp.html)                                                 1-pr-m
+2. [Outreach & Collaboration](outreach.html)-now HP                p-yet to-m
 
 **Education**
 1. [Education](education.html)                                     N
