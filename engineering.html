@@ -90,93 +90,129 @@
         <aside>                                 <!--table of contents-->
             <h3>Table of Contents</h3>
             <ul>
-                <li><a href="#bacillus_amyloliquefaciens"><i>Bacillus amyloliquefaciens</i> LL3 and NK-1 </a></li>
-                <li><a href="#media_optimization">Media Optimization </a></li>
+                <li><a href="#our_aim"><a>Our Aim </a></li>
+                <li><a href="#the_strain_[1]">The Strain [1] </a></li>
+                <li><a href="#confirmatory_tests">Confirmatory Tests</a></li>
+                <li><a href="#growth_curves">Growth Curves</a></li>
+                <li><a href="#plasmid_design">Plasmid Design</a></li>
                 <li><a href="#wet_lab_procedures">Wet Lab Procedures</a></li>
+                <li><a href="#extraction_quantification_and_mixing">Extraction, Quantification and Mixing</a></li>
             </ul>
         </aside>
 
         <div class="content">                    <!--content section-->
             <section class="subsections">
                 
-                <h2 id="bacillus_amyloliquefaciens"><i>Bacillus amyloliquefaciens</i> LL3 and NK-1 [1]</h2>
+                <h2 id="our_aim"> Our Aim</h2>
                 <p>
-                    Modular pathway engineering was performed on the LL3 strain of <i>Bacillus amyloliquefaciens</i> LL3 to optimize the biosynthetic pathway and tweak the genes corresponding to other metabolic fluxes. As shown in Fig. 1, multiple synthetic bottlenecks were manipulated in the LL3 strain to obtain <i>Bacillus amyloliquefaciens</i> NK-1. 
-                </p>
-            </section>
-            <img src="images/modular.png" alt="Fig. 1: Modular Engineering performed on the LL3 strain to obtain NK-1. [2]" style="width: 40vw; margin-left: 13vw;">
-                    <br>
-                    <p style="background-color: #f0ddc0; width: 100%; text-align: center; font-family: 'Jua';"> Fig. 1: Modular Engineering performed on the LL3 strain to obtain NK-1. [2]</p>
-            <section class="subsections">
-                <p>
-                    To improve γ-PGA production, the following five genetic modifications were aimed as elucidated above:
+                    Our main aim is to increase the yield of γ-PGA. For that, we aim to engineer a plasmid that will produce repressor proteins suppressing the expression of the Ggt, γ-glutamyl transferase, which degrades γ-PGA [1].
                     <br><br>
-                    &ensp;&emsp;1. <b>By-product Reduction </b> – Knocked out genes (eps, sac, glyc, lps, ldh, pta) to avoid any polysaccharide, lactate, and acetate production.
-                    <br>
-                    &ensp;&emsp;2.	<b>γ-PGA Stability</b> – Removed pgdS and cwlO genes to prevent γ-PGA degradation.
-                    <br>
-                    &ensp;&emsp;3.	<b>Stress Tolerance</b> – Removed luxS for better environmental protection.
-                    <br>
-                    &ensp;&emsp;4.	<b>Improved γ-PGA Biosynthesis</b> – Overexpressed pgsBCA via the addition of a P43 promoter.
-                    <br>
-                    &ensp;&emsp;5.	<b>Glutamate Supply</b> – Utilized synthetic sRNAs to down-regulate rocG and glnA, resulting in intracellular glutamate accumulation.
+                    Earlier the PgdS gene, was of interest, which is γ-PGA hydrolase, yet the team recently discovered that the resulting PgdS-deficient mutant strain did not produce γ-PGA, suggesting that the PgdS gene is essential for γ-PGA biosynthesis and its exact function is yet to be known. These studies were conducted in <i>Bacillus licheniformis</i> RK14-46 [1].
                     <br><br>
-                    The engineered NK-anti-rocG strain produced γ-PGA titers of <b>11.04 g/L</b> in flasks and <b> 20.3 g/L</b> in a 5 L fermenter, showing a <b>2.91-fold</b> and <b>5.34-fold</b> increase from the control strain.
-                    <br> <br>
-                    However, this gene was sourced from the laboratory of Feng, et. Al., and hence not available in any of the forums such as MTCC, ATCC or NCIMB. Hence, it was decided to proceed with a different strain. 
-                    <br> <br>
-                    A study has also shown that gamma pga is produced in <i>B. subtilis</i> without the pgsA gene [2].
+                    As discussed earlier, the disruption of the Ggt gene increased γ-PGA production due to the prevention of γ-PGA degradation. Changing the initial glucose concentration and aeration increased γ-PGA production to 39.1 ± 1.2 g/L [1].
 
                 </p>
             </section>
 
             <section class="subsections">
-                <h2 id="media_optimization">Media Optimization [1]</h2>
+                <h2 id="the_strain_[1]">The Strain [1]</h2>
                 <p>
-                    Of the various media mentioned above as taken from the paper, Medium E produced the highest yield:
+                    We had earlier stuck with <i>Bacillus licheniformis</i> ATCC9945A but now, the above-mentioned knockdown of the Ggt gene was performed in <i>Bacillus licheniformis</i> RK14-46. 
                     <br><br>
-                    <b>Medium E was composed of:</b>
+                    There was a sequence alignment performed between <i>Bacillus licheniformis</i> ATCC14580 and <i>Bacillus licheniformis</i> RK14-46 in the supplementary material provided by Ojima et. al., and figured out only 2 amino acids were varying. 
                     <br><br>
-                    •	20 g/l L-glutamic acid
-                    <br>
-                    •	12 g/l citric acid
-                    <br>
-                    •	80 g/l glycerol
-                    <br>
-                    •	7 g/l NH<sub>4</sub>Cl
-                    <br>
-                    •	0.5 g/l MgSO<sub>4</sub>· 7H<sub>2</sub>O
-                    <br>
-                    •	0.04 g/l FeCl<sub>3</sub>· 6H<sub>2</sub>O
-                    <br>
-                    •	0.5 g/l K<sub>2</sub>HPO<sub>4</sub>
-                    <br>
-                    •	0.15 g/l CaCl<sub>3</sub>· 2H<sub>2</sub>O.
+                    The Dry Lab team ran a BLAST between <i>Bacillus licheniformis</i> WX-02 and <i>Bacillus licheniformis</i> ATCC14580 and found a similarity of 99.89%. 
                     <br><br>
-                    <b>All of the above are subject to change. The team is also looking into further ways to employ a plasmid to produce a repressor to prevent the degradase gene. </b>
+                    In a nutshell, the promoter sequences found in <i>Bacillus licheniformis</i> WX-02 are also found in <i>Bacillus licheniformis</i> ATCC14580 which is only 2 amino acids different from <i>Bacillus licheniformis</i> RK14-46 where the Ggt knockdown was successful.
+                    <br><br>
+                    Hence, we now prefer to stick to <i>Bacillus licheniformis</i> ATCC14580. The protocols and material document do mention <i>Bacillus licheniformis</i> ATCC9945A, yet we believe since the same species of organisms are involved, there won’t be a huge difference in the same. 
+
+                </p>
+            </section>
+            <section class="subsections">
+                <h2 id="confirmatory_tests">Confirmatory Tests</h2>
+                <p>
+                    To confirm that the outsourced bacterial culture is indeed <i>Bacillus licheniformis</i>, the team plans to conduct a series of biochemical and staining tests.                  
+                    <br><br>
+                    First, Gram staining will be performed to verify that the bacteria are Gram-positive rods. Hot Spore staining will help detect the presence of endospores, a characteristic feature of <i>Bacillus</i> species. 
+                    <br><br>
+                    The Indole test will determine whether the bacteria can break down tryptophan to produce indole. Additionally, the Methyl Red (MR) test will assess the production of stable acid end products from glucose fermentation, while the Voges-Proskauer (VP) test will confirm the ability to produce acetoin. 
+                    <br><br>
+                    These tests collectively provide a strong basis for identifying <i>Bacillus licheniformis</i>.
+                </p>
+            </section>
+            <section class="subsections">
+                <h2 id="growth_curves">Growth Curves</h2>
+                <p>
+                    The team will use controlled settings to verify growth characteristics by monitoring at various time intervals the proliferation of the outsourced <i>Bacillus licheniformis</i> culture to construct growth curves. 
+                    <br><br>
+                    Bacteria will be monitored at OD600 at intervals for the progression through lag, exponential, stationary, and decline phases of bacteria growth. Serial dilution and plate counting may also be utilized to obtain viable cell counts that correlate optical density with real bacterial populations. 
+                    <br><br>
+                    Data acquired will then be used to verify if the growth pattern conforms to the specific features predicted for <i>Bacillus licheniformis</i>, thus establishing the identity of the culture and viability for potential uses in the future. 
+                    <br><br>
+                </p>
+            </section>
+            <section class="subsections">
+                <h2 id="plasmid_design">Plasmid Design</h2>
+                <p>
+                    pBGSC6 is an integration vector with a length of 3856 bp that confers ampicillin resistance [2]. Calcium chloride (CaCl2) competency is a method used to make <i>Bacillus licheniformis</i> cells more permeable to plasmid DNA, facilitating transformation. 
+                    <br><br>
+                    The process involves treating bacterial cells with an ice-cold CaCl2 solution, which helps neutralize the negative charges on both the cell membrane and DNA, allowing the plasmid to enter the cell more easily. Heat shock is then applied to create a temporary opening in the membrane, enabling DNA uptake. A PCR cycle is run to make sure the gene has been taken into the cell. 
+                    <br><br>
+                   
                 </p>
             </section>
             <section class="subsections">
                 <h2 id="wet_lab_procedures"> Wet Lab Procedures</h2>
                 <p>
-                    •	Media Optimization
-                    <br>
+                    •	Transformation
+                        <br><br>
+                    •   Confirmation
+                        <br><br>
+                    •   Media Optimization
+                        <br><br>
                     •	Inoculation
-                    <br>
+                        <br><br>
+                    •   Incubation
+                        <br><br>
+                    •   Growth Curve Analysis
+                        <br><br>
                     •	Fermentation
-                    <br>
+                        <br><br>
+                    •   Isolation/Extraction
+                        <br><br>
                     •	Quantification
-                    <br>
-                    •	Isolation
-                    <br>
+                        <br><br>
                     •	Purification
+                </p>
+            </section>
+            <section class="subsections">
+                <h2 id="extraction_quantification_and_mixing">Extraction, Quantification, and Mixing</h2>
+                <p>
+                    The engineering method tries to optimize the transformation of <i>Bacillus licheniformis</i> to enhance gamma-PGA synthesis, as it has an application in the field of bio cement as a binding agent. The CaCl<sup>2</sup>-mediated competence approach is used to introduce the plasmid harbouring gamma-PGA synthesis genes. 
+                    <br><br>
+                    After transformation, growth curves and biochemical tests including gram staining, spore staining, and metabolic assays set bacterial identification and productivity. Once the gamma-PGA production is optimized, yield and quality will be tested to ensure uniformity. 
+                    <br><br>
+                    Successful transformation and expression of the bacterium will result in mass production of gamma-PGA, which will later be added to construction materials to enhance mechanical strength and durability.  
+                    <br><br>
+                    Nuclear Magnetic Resonance (NMR) spectroscopy is a powerful analytical technique for quantifying gamma-PGA in our bio cement formulation. By analyzing the distinct proton (^1H) and carbon (^13C) spectra, NMR can confirm the presence of gamma-PGA and determine its concentration with high precision. 
+                    <br><br>
+                    If we face issues due to technicalities and approvals, we try to resolve them by using HPLC instead. GPC is more prevalent. A gel permeation chromatography (GPC) method was developed to determine gamma-PGA volumetric yield and molecular weight directly using culture filtrates. For GPC volumetric yield measurements, a calibration curve was generated using purified gamma-PGA to relate the gamma-PGA GPC peak area and polymer weight [3]. 
+                    <br><br>
+                    As indicated by research, gamma-PGA should consist of about 28.6 percent of the entire solid mixture in sand mixing techniques. The values are from the ratios of polymer-to-liquid and glass-to-polymer used within biomedical cement applications. 
+                    <br><br>   
+                    Within our method, gamma-PGA will serve as a bonding agent, blended with sand and other aggregates to increase adhesion as well as structural strength. ultra-high-performance concrete boasts a compressive strength of approximately 130 MPa. 
+                    <br><br>
+                    Experimental testing will be necessary to fine-tune the ratio to optimize performance while still ensuring practical workability and durability for real-world construction applications. adjustments may be made based on field results. 
+                    <br><br>
                 </p>
             </section>
             <section class="subsections">       <!--references section-->
                 <h2>References</h2>
                     <ol class="reference">
-                        <li>1. Feng, J., Gu, Y., Quan, Y., Cao, M., Gao, W., Zhang, W., Wang, S., Yang, C., & Song, C. (2015). Improved poly-γ-glutamic acid production in Bacillus amyloliquefaciens by modular pathway engineering. Metabolic Engineering, 32, 106115.  <a class="ref" target="_blank" href="https://doi.org/10.1016/j.ymben.2015.09.011 ">https://doi.org/10.1016/j.ymben.2015.09.011</a></li>
-                        <li>2. Sawada, K., Araki, H., Takimura, Y. et al. Poly-l-gamma-glutamic acid production by recombinant Bacillus subtilis without pgsA gene. AMB Expr 8, 110 (2018). <a class="ref" target="_blank" href="https://doi.org/10.1186/s13568-018-0636-x">https://doi.org/10.1186/s13568-018-0636-x</a></li>
+                        <li>Ojima, Y., Kobayashi, J., Doi, T., & Azuma, M. (2019). Knockout of pgdS and ggt gene changes poly-γ-glutamic acid production in Bacillus licheniformis RK14-46. Journal of Biotechnology, 304, 57-62.   <a class="ref" target="_blank" href="https://doi.org/10.1016/j.jbiotec.2019.08.003">https://doi.org/10.1016/j.jbiotec.2019.08.003</a></li>
+                       <li><a class="ref" target="_blank" href="pBGSC6 vector map and sequence">pBGSC6 vector map and sequence</a></li>
+                        <li> Birrer, G. A., Cromwick, A. M., & Gross, R. A. (1994). γ-Poly (glutamic acid) formation by Bacillus licheniformis 9945a: physiological and biochemical studies. International journal of biological macromolecules, 16(5), 265-275.
                     </ol>
             </section> 
             
